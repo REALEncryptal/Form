@@ -1,0 +1,196 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.main-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.navbar img {
+    width: 50px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.navbar ul li a {
+    color: #27251F;
+    text-decoration: none;
+    padding: 10px;
+    transition: .2s;
+    border-bottom: 5px solid #27251f00;
+}
+
+.navbar ul li a:hover {
+    transition: .2s;
+    border-bottom: 1px solid #27251F;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+section h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #27251F;
+}
+
+section p {
+    color: #27251F;
+    font-size:17px;
+    margin-bottom: 10px;
+}
+
+section.footer {
+    text-align: center;
+}
+
+section.footer p {
+    font-size: 15px;
+    color: #27251F;
+}
+
+#selected {
+    color: #FFC72C;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.seperator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.seperator h1 {
+    font-size: 15px;
+    color: #27251F;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.seperator hr {
+    height: 0px;
+    margin-bottom: 10px; 
+}
+
+.phone-container {
+    display: flex;
+    width: 100%;
+}
+
+.phone-container input {
+    margin: 0px;
+}
+
+.phone-container input:first-child {
+    width: 20%;
+    margin-right: 10px;
+}
+
+.phone-container input:last-child {
+    width: 80%;
+}
+
+.split {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.split input {
+    margin: 0px;
+}
+
+form p {
+    font-size: 15px;
+    color: #27251F;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 30px;
+}
+
+.checkbox input {
+    margin: 0px;
+    width: 20px;
+}
+
+.checkbox label {
+    font-size: 15px;
+    color: #27251F;
+    white-space: nowrap;
+    font-weight: 400;
+    margin-left: 14px;
+}
+
+.checkbox#yeswrap {
+    margin-top: 10px;
+}
+
+.checkbox#yeswrap label{
+    white-space: normal;
+}
+
+.checkbox#yeswrap input{
+    width: 28px;
+}

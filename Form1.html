@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+    </script>
+
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <img src="https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg" alt="Golden Arches Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Form1.html" id="selected">Form 1</a></li>
+                <li><a href="Form2.html">Form 2</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <form>
+            <section>
+                <div class="seperator">
+                    <h1>Basic</h1>
+                    <hr>
+                </div>
+                <input type="date" id="start" name="date" min="2023-12-24" max="2030-01-01" />
+                <input type="text" name="name" placeholder="First, middle, and last name">
+                <input type="number" name="age" placeholder="Age">
+                <input type="text" name="referredBy" placeholder="Referred by">
+                <input type="text" name="position" placeholder="Position applied for">
+            </section>
+            
+            <section>
+                <div class="seperator">
+                    <h1>Phone Number</h1>
+                    <hr>
+                </div>
+
+                <div class="phone-container">
+                    <input type="number" name="phoneAreaCode" id="code" placeholder="1+">
+                    <input type="number" 
+                        name="phoneNumber" 
+                        id="number" 
+                        placeholder="123-45-678"
+                    >
+                </div>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>Address</h1>
+                    <hr>
+                </div>
+
+                <input type="text" name="address" placeholder="Address">
+
+                <div class="split">
+                    <input type="text" name="city" placeholder="City">
+                    <input type="text" name="province" placeholder="Province">
+                    <input type="number" name="zip" placeholder="Zip">
+                </div>
+
+                <p>How long have you been at this address</p>
+                <div class="split">
+                    <input type="number" name="years" placeholder="Years">
+                    <input type="number" name="months" placeholder="Months">
+                </div>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>Other Info</h1>
+                    <hr>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" name="legal">
+                    <label for="legal">Are you presently employed?</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="legal" id="worked-before">
+                    <label for="legal">Have you ever worked for McDonald's before?</label>
+                </div>
+
+                <input type="text" name="worked-where" placeholder="Where?" id="work-where" style="display: none;">
+
+                <div class="checkbox" id="yeswrap">
+                    <input type="checkbox" name="been-convicted">
+                    <label for="legal">Have you ever been convicted of a criminal offense for which you have not been pardoned? </label>
+                </div>
+
+                <div class="checkbox" id="yeswrap">
+                    <input type="checkbox" name="legal" id="worked-before" style="width: 35px;">
+                    <label for="legal">Are you legally entitled to work in Canada? (You may be required to provide proof of employment status prior to hire.)</label>
+                </div>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>Availability</h1>
+                    <hr>
+                </div>
+            </section>
+        </form>
+
+        <hr>
+        <section class="footer">
+            <p>© 2017 - 2023 McDonald's. All Rights Reserved</p>
+        </section>
+    </div>
+</body>
+</html>
