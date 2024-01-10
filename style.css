@@ -155,6 +155,58 @@ form input {
     margin: 0px;
 }
 
+.split p {
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    height: 37px;
+    background-color: #ffffff00;
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: .1s;
+    transform-origin: center;
+}
+
+button:hover {
+    transition: .2s;
+    transform: scale(.98);
+    width: 96%;
+}
+
+button:active {
+    transition: .1s;
+    transform: scale(.95);
+    width: 93%;
+}
+
+.greenButton {
+    border-color: #66924b;
+    color: #66924b;
+}
+
+.redButton {
+    border-color: #ff726b;
+    color: #ff726b;
+}
+
+#addEmployment {
+    border-color: #66924b;
+    color: #66924b;
+}
+
+#removeEmployment {
+    border-color: #ff726b;
+    color: #ff726b;
+}
+
+.split-item {
+    width: 100%;
+    text-align: center;
+}
+
 form p {
     font-size: 15px;
     color: #27251F;
@@ -193,4 +245,9 @@ form p {
 
 .checkbox#yeswrap input{
     width: 28px;
+}
+
+.bottomanchor {
+    width: 100%;
+    margin-top: 37px;
 }

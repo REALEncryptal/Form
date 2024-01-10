@@ -84,7 +84,7 @@
 
                 <div class="checkbox">
                     <input type="checkbox" name="legal">
-                    <label for="legal">Are you presently employed?</label>
+                    <label for="legal">Are you currently employed?</label>
                 </div>
                 <div class="checkbox">
                     <input type="checkbox" name="legal" id="worked-before">
@@ -108,6 +108,113 @@
                 <div class="seperator">
                     <h1>Availability</h1>
                     <hr>
+                </div>
+                
+                <div class="split">
+                    <div class="split-item">
+                        <p>From</p>
+                        <input type="date" id="start" name="availablefrom" min="2023-12-24" max="2030-01-01"/>
+                    </div>
+                    <div class="split-item">
+                        <p>Until</p>
+                        <input type="date" id="start" name="availableuntil" min="2023-12-24" max="2030-01-01"/>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>Employment Background</h1>
+                    <hr>
+                </div>
+
+                <div class="entry-container">
+                
+                </div>
+                <div class="entry-container">
+                    
+                    <div class="work-entry">
+                        <div class="split" style="margin-bottom: 0px;">
+                            <div class="split">
+                                <div class="split-item">
+                                    <p>From</p>
+                                    <input type="date" id="start" name="employmentfrom" min="2023-12-24" max="2030-01-01"/>
+                                </div>
+                                <div class="split-item">
+                                    <p>Until</p>
+                                    <input type="date" id="start" name="employmentto" min="2023-12-24" max="2030-01-01"/>
+                                </div>
+                            </div>
+                            <div class="bottomanchor">
+                                <input type="text" name="employer" placeholder="Company Name">
+                            </div>
+                        </div>
+
+                        <div class="phone-container">
+                            <input type="number" name="phoneAreaCode" id="code" placeholder="1+">
+                            <input type="number" 
+                                name="phoneNumber" 
+                                id="number" 
+                                placeholder="123-45-678"
+                            >
+                        </div>
+
+                        <div class="split" style="margin-top: 10px;">
+                            <!--Supervisor name & position-->
+                            <input type="text" name="supervisorname" placeholder="Supervisor Name">
+                            <input type="text" name="supervisorposition" placeholder="Supervisor Position">
+                        </div>
+                        
+                        <div class="split">
+                            <!--Start Salary & end Salary & position-->
+                            <input type="number" name="startSalary" placeholder="Start Salary">
+                            <input type="number" name="endSalary" placeholder="End Salary">
+                            <input type="text" name="position" placeholder="Position">
+                        </div>
+
+                        <!--Reason for leaving-->
+                        <input type="text" name="reason" placeholder="Reason for leaving">
+                        <hr>
+                    </div>
+
+                </div> <!--Entry Container end-->
+                <div class="split" style="justify-content: center;">
+                    <button type="button" onclick="return addButtonClick()" id="addEmployment">Add</button>
+                    <button type="button" onclick="return removeButtonClick()" id="removeEmployment">Remove</button>
+                </div>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>Info</h1>
+                    <hr>
+                </div>
+
+                <p style="text-align: left;">
+                    I declare that the information contained in this application is correct to the best of my knowledge and understand that any omission or
+                    incorrect information is just cause for the rejection of my application or dismissal in accordance with the Company policy. If hired, I
+                    understand that I may be transferred to another restaurant because of promotions, training or staffing requirements. I also agree that, at all
+                    times, I will follow the rules and regulations of the Company. I authorize the Company, or its agents, to verify the information provided, and
+                    to obtain any other information relevant to this application. This information may be obtained by telephone or in writing from educational
+                    institutions, my current or former employers, financial institutions, personal information agents and my personal references. This consent is
+                    valid during the consideration of my application for employment, and if I am hired, for the duration of my employment. 
+                </p>
+            </section>
+
+
+            <!--Submit-->
+            <button href="#areyousure" class="greenButton" type="button" onclick="return submit1()" id="submitfirst">Agree</button>
+
+            <!--are you sure-->
+            <section id="areyousure" style="display: none;">
+                <div class="seperator">
+                    <h1>Are you sure?</h1>
+                    <hr>
+                </div>
+                <p>Are you sure you want to submit this application?</p>
+                <div class="split">
+                    <button style="margin-bottom: 10px;" class="greenButton" type="submit" href="index.html">Yes</button>
+                    <button class="redButton" type="button" onclick="return noconfirm()">No</button>
                 </div>
             </section>
         </form>
