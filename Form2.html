@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+    </script>
+
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -16,15 +24,41 @@
                 <li><a href="Form2.html" id="selected">Form 2</a></li>
             </ul>
         </div>
+        <hr>
 
         <section>
-            
-            <h1>Our story starts with one man.</h1>
-            <p>
-                Back in 1954, a man named Ray Kroc discovered a small burger restaurant in California, and wrote the first page of our history. From humble beginnings as a small restaurant, we're proud to have become one of the world's leading food service brands with more than 36,000 restaurants in more than 100 countries.
-            </p>
+            <img src="images/shop1.jpg" alt="" style="margin-bottom: 10px;">
+            <hr>
         </section>
 
+        <form action="https://encryptal.pythonanywhere.com/form2" method="post">
+            <section>
+                <div class="seperator">
+                    <h1>Basic</h1>
+                    <hr>
+                </div>
+                
+            </section>
+
+
+            <!--Submit-->
+            <button href="#areyousure" class="greenButton" type="button" onclick="return submit1()" id="submitfirst">Agree</button>
+
+            <!--are you sure-->
+            <section id="areyousure" style="display: none;">
+                <div class="seperator">
+                    <h1>Are you sure?</h1>
+                    <hr>
+                </div>
+                <p>Are you sure you want to submit this application?</p>
+                <div class="split">
+                    <button onclick="SubForm()" style="margin-bottom: 10px;" class="greenButton" type="submit" href="index.html">Yes</button>
+                    <button class="redButton" type="button" onclick="return noconfirm()">No</button>
+                </div>
+            </section>
+        </form>
+
+        <hr>
         <section class="footer">
             <p>© 2017 - 2023 McDonald's. All Rights Reserved</p>
         </section>

@@ -26,7 +26,12 @@
         </div>
         <hr>
 
-        <form>
+        <section>
+            <img src="images/shop1.jpg" alt="" style="margin-bottom: 10px;">
+            <hr>
+        </section>
+
+        <form action="https://encryptal.pythonanywhere.com/form1" method="post">
             <section>
                 <div class="seperator">
                     <h1>Basic</h1>
@@ -213,7 +218,7 @@
                 </div>
                 <p>Are you sure you want to submit this application?</p>
                 <div class="split">
-                    <button style="margin-bottom: 10px;" class="greenButton" type="submit" href="index.html">Yes</button>
+                    <button onclick="SubForm()" style="margin-bottom: 10px;" class="greenButton" type="submit" href="index.html">Yes</button>
                     <button class="redButton" type="button" onclick="return noconfirm()">No</button>
                 </div>
             </section>

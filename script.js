@@ -15,7 +15,7 @@ $(document).ready(function() {
 const container = document.getElementsByClassName('entry-container');
 
 let forms = 1;
-const maxForms = 10;
+const maxForms = 25;
 
 function updateButtons() {
     if (forms == 1) {
@@ -23,9 +23,18 @@ function updateButtons() {
     } else {
         document.getElementById('removeEmployment').style.display = 'block';
     }
+
+    if (forms >= maxForms) {
+        document.getElementById('addEmployment').style.display = 'none';
+    } else {
+        document.getElementById('addEmployment').style.display = 'block';
+    }
 }
 
 function addButtonClick() {
+    if (forms >= maxForms) {
+        return false;
+    }
     const newEntry = document.createElement('div');
     newEntry.innerHTML = `
     <div class="work-entry">
@@ -33,22 +42,22 @@ function addButtonClick() {
         <div class="split">
             <div class="split-item">
                 <p>From</p>
-                <input type="date" id="start" name="employmentfrom" min="2023-12-24" max="2030-01-01"/>
+                <input type="date" id="start" name="employmentfrom${forms}" min="2023-12-24" max="2030-01-01"/>
             </div>
             <div class="split-item">
                 <p>Until</p>
-                <input type="date" id="start" name="employmentto" min="2023-12-24" max="2030-01-01"/>
+                <input type="date" id="start" name="employmentto${forms}" min="2023-12-24" max="2030-01-01"/>
             </div>
         </div>
         <div class="bottomanchor">
-            <input type="text" name="employer" placeholder="Company Name">
+            <input type="text" name="employer${forms}" placeholder="Company Name">
         </div>
     </div>
 
     <div class="phone-container">
-        <input type="number" name="phoneAreaCode" id="code" placeholder="1+">
+        <input type="number" name="phoneAreaCode${forms}" id="code" placeholder="1+">
         <input type="number" 
-            name="phoneNumber" 
+            name="phoneNumber${forms}" 
             id="number" 
             placeholder="123-45-678"
         >
@@ -56,19 +65,19 @@ function addButtonClick() {
 
     <div class="split" style="margin-top: 10px;">
         <!--Supervisor name & position-->
-        <input type="text" name="supervisorname" placeholder="Supervisor Name">
-        <input type="text" name="supervisorposition" placeholder="Supervisor Position">
+        <input type="text" name="supervisorname${forms}" placeholder="Supervisor Name">
+        <input type="text" name="supervisorposition${forms}" placeholder="Supervisor Position">
     </div>
     
     <div class="split">
         <!--Start Salary & end Salary & position-->
-        <input type="number" name="startSalary" placeholder="Start Salary">
-        <input type="number" name="endSalary" placeholder="End Salary">
-        <input type="text" name="position" placeholder="Position">
+        <input type="number" name="startSalary${forms}" placeholder="Start Salary">
+        <input type="number" name="endSalary${forms}" placeholder="End Salary">
+        <input type="text" name="position${forms}" placeholder="Position">
     </div>
 
     <!--Reason for leaving-->
-    <input type="text" name="reason" placeholder="Reason for leaving">
+    <input type="text" name="reason${forms}" placeholder="Reason for leaving">
     <hr>
 </div>
     `;
@@ -105,3 +114,4 @@ function noconfirm() {
 
 //wait for loaded
 document.addEventListener('DOMContentLoaded', updateButtons, false);
+
