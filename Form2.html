@@ -22,12 +22,13 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Form1.html">Form 1</a></li>
                 <li><a href="Form2.html" id="selected">Form 2</a></li>
+                <li><a href="https://encryptal.pythonanywhere.com/">Data</a></li>
             </ul>
         </div>
         <hr>
 
         <section>
-            <img src="images/shop1.jpg" alt="" style="margin-bottom: 10px;">
+            <img src="https://as1.ftcdn.net/v2/jpg/00/53/68/78/1000_F_53687852_ghHIqQ9SqqtXR4AJsVqssETfYM7NFQYl.jpg" alt="" style="margin-bottom: 10px;">
             <hr>
         </section>
 
@@ -37,7 +38,65 @@
                     <h1>Basic</h1>
                     <hr>
                 </div>
+
+                <input name="companyName" placeholder="Company Name">
+                <input name="title" placeholder="Job Title">
                 
+                <select name="jobType">
+                    <option value="fulltime">Full Time</option>
+                    <option value="parttime">Part Time</option>
+                    <option value="contract">Contract</option>
+                    <option value="internship">Internship</option>
+                </select>
+
+                <input name="industry" placeholder="Industry">
+
+                <hr style="margin:10px; margin-left: 0px;">
+                <p>Job location</p>
+                <input type="text" name="address" placeholder="Address">
+                <div class="split">
+                    <input type="text" name="city" placeholder="City">
+                    <input type="text" name="province" placeholder="Province">
+                    <input type="number" name="zip" placeholder="Zip">
+                </div>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>Description</h1>
+                    <hr>
+                </div>
+
+                <textarea name="description" placeholder="Job description"></textarea>
+            </section>
+
+
+            <section>
+                <div class="seperator">
+                    <h1>Requirements</h1>
+                    <hr>
+                </div>
+
+                <textarea name="pastrequirements" placeholder="Experience requirements"></textarea>
+                <textarea name="physicalrequirements" placeholder="Physical requirements"></textarea>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>Benefits</h1>
+                    <hr>
+                </div>
+
+                <textarea name="benefits" placeholder="Benefits"></textarea>
+            </section>
+
+            <section>
+                <div class="seperator">
+                    <h1>About</h1>
+                    <hr>
+                </div>
+
+                <textarea name="about" placeholder="About your company"></textarea>
             </section>
 
 
